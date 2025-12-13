@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("USER") // "USER" or "ADMIN"
+  createdAt DateTime @default(now())
+}
+
+model Sweet {
+  id        Int      @id @default(autoincrement())
+  name      String
+  category  String
+  price     Float
+  quantity  Int
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Optional but good for Purchase/Restock logs
+model InventoryLog {
+    id        Int      @id @default(autoincrement())
+    sweetId   Int
+    action    String   // "PURCHASE" or "RESTOCK"
+    quantity  Int
+    createdAt DateTime @default(now())
+}
