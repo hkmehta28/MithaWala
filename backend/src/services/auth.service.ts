@@ -12,11 +12,12 @@ export const registerUser = async (email: string, password: string, name?: strin
 
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await prisma.user.create({
+    data: {
       email,
       password: hashedPassword,
       name,
       role: 'USER' // Explicitly force USER role for public registration
-    },
+    }
   });
   
   const { password: _, ...userWithoutPassword } = user;

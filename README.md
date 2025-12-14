@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MithaWala - Sweet Shop Management System
 
 A modern, full-stack web application for managing a sweet shop's inventory, sales, and customer interactions. Built with love and the latest web technologies.
@@ -152,3 +153,6 @@ This project leveraged **AGI (Advanced General Intelligence)** agents for:
 ---
 
 _Built with ❤️ by the Harshit Kumar Mehta_
+=======
+# MithaWala
+>>>>>>> 4f3dfe8e249cd73e6b4f40644455d4bf64f8858f
