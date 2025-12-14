@@ -18,6 +18,7 @@ interface Sweet {
 const Home: React.FC = () => {
   const [sweets, setSweets] = useState<Sweet[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [maxPrice, setMaxPrice] = useState<number>(50);
   const { isAuthenticated } = useAuth();
 
   const fetchSweets = async () => {
@@ -65,7 +66,8 @@ const Home: React.FC = () => {
   const filteredSweets = sweets.filter(s => {
       const matchesCategory = selectedCategory === 'All' || s.category.includes(selectedCategory) || s.category === selectedCategory;
       const matchesSearch = s.name.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
+      const matchesPrice = s.price <= maxPrice;
+      return matchesCategory && matchesSearch && matchesPrice;
   });
 
   return (
@@ -107,14 +109,22 @@ const Home: React.FC = () => {
                 </div>
                 
                 <div className="mt-4 bg-yellow-50/50 rounded-md border border-yellow-100 p-4">
-                     <h3 className="font-bold text-sm uppercase mb-4">Price</h3>
-                     <div className="h-1 bg-gray-300 rounded relative">
-                         <div className="absolute left-0 w-1/2 h-full bg-primary"></div>
-                         <div className="absolute left-1/2 w-4 h-4 bg-primary rounded-full -top-1.5 shadow"></div>
+                     <h3 className="font-bold text-sm uppercase mb-4">Price Filter</h3>
+                     <input 
+                        type="range" 
+                        min="20" 
+                        max="50" 
+                        step="1"
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(Number(e.target.value))}
+                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary"
+                     />
+                     <div className="flex justify-between text-xs mt-2 font-medium text-gray-600">
+                         <span>₹20</span>
+                         <span>₹50</span>
                      </div>
-                     <div className="flex justify-between text-xs mt-2 font-medium">
-                         <span>₹45.00</span>
-                         <span>₹1,150.00</span>
+                     <div className="text-center mt-2">
+                        <span className="text-sm font-bold text-primary">Up to ₹{maxPrice}</span>
                      </div>
                 </div>
             </aside>
