@@ -122,12 +122,14 @@ A modern, full-stack web application for managing a sweet shop's inventory, sale
 ### Home Page
 
 > Display showing the hero section and product grid with filters.
-> ![Home Page](assets/screenshots/home.png) > ![Home Page 2](assets/screenshots/home2.png)
+> ![Home Page](assets/screenshots/home.png)
+> ![Home Page 2](assets/screenshots/home2.png)
 
 ### Admin Dashboard
 
 > Interface for adding and editing sweets with image preview.
-> ![Admin Dashboard](assets/screenshots/admin_dashboard.png) > ![Admin Details](assets/screenshots/admin_details.png)
+> ![Admin Dashboard](assets/screenshots/admin_dashboard.png)
+> ![Admin Details](assets/screenshots/admin_details.png)
 
 ### Shopping Cart
 
