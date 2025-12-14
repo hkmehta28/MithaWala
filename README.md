@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MithaWala - Sweet Shop Management System
 
 A modern, full-stack web application for managing a sweet shop's inventory, sales, and customer interactions. Built with love and the latest web technologies.
@@ -123,17 +122,17 @@ A modern, full-stack web application for managing a sweet shop's inventory, sale
 ### Home Page
 
 > Display showing the hero section and product grid with filters.
-> ![Home Page](path/to/screenshot_home.png)
+> ![Home Page](assets/screenshots/home.png) > ![Home Page 2](assets/screenshots/home2.png)
 
 ### Admin Dashboard
 
 > Interface for adding and editing sweets with image preview.
-> ![Admin Dashboard](path/to/screenshot_admin.png)
+> ![Admin Dashboard](assets/screenshots/admin_dashboard.png) > ![Admin Details](assets/screenshots/admin_details.png)
 
 ### Shopping Cart
 
 > Cart view with quantity adjustments and total summary.
-> ![Shopping Cart](path/to/screenshot_cart.png)
+> ![Shopping Cart](assets/screenshots/cart.png)
 
 ## 🤖 My AI Usage
 
@@ -145,7 +144,6 @@ This project leveraged **AGI (Advanced General Intelligence)** agents for:
 - **Refactoring**: Converting CSS to Tailwind utility classes for a consistent design system.
 - **Testing**: Writing Jest unit tests for backend API endpoints.
 
-
 **Security Reviews:**
 
 - The AI assisted in identifying potential security gaps in the Admin Route protection and recommended implementing double-checked locking mechanisms.
@@ -153,6 +151,3 @@ This project leveraged **AGI (Advanced General Intelligence)** agents for:
 ---
 
 _Built with ❤️ by the Harshit Kumar Mehta_
-=======
-# MithaWala
->>>>>>> 4f3dfe8e249cd73e6b4f40644455d4bf64f8858f
